@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Make:</b>
+  <%= @item.make %>
+</p>
+
+<p>
+  <b>Model name:</b>
+  <%= @item.model_name %>
+</p>
+
+<p>
+  <b>Model number:</b>
+  <%= @item.model_number %>
+</p>
+
+<p>
+  <b>Serial number:</b>
+  <%= @item.serial_number %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @item.category %>
+</p>
+
+<p>
+  <b>Purchase price:</b>
+  <%= @item.purchase_price %>
+</p>
+
+<p>
+  <b>Purchase date:</b>
+  <%= @item.purchase_date %>
+</p>
+
+<p>
+  <b>Place purchased:</b>
+  <%= @item.place_purchased %>
+</p>
+
+<p>
+  <b>Mfg warranty expires:</b>
+  <%= @item.mfg_warranty_expires %>
+</p>
+
+<p>
+  <b>Ext warranty expires:</b>
+  <%= @item.ext_warranty_expires %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

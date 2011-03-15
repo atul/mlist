@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  make: MyString
+  model_name: MyString
+  model_number: MyString
+  serial_number: MyString
+  category: MyString
+  purchase_price: 9.99
+  purchase_date: 2011-03-15
+  place_purchased: MyString
+  mfg_warranty_expires: 2011-03-15
+  ext_warranty_expires: 2011-03-15
+  description: MyText
+
+two:
+  make: MyString
+  model_name: MyString
+  model_number: MyString
+  serial_number: MyString
+  category: MyString
+  purchase_price: 9.99
+  purchase_date: 2011-03-15
+  place_purchased: MyString
+  mfg_warranty_expires: 2011-03-15
+  ext_warranty_expires: 2011-03-15
+  description: MyText
