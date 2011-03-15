@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110315122600) do
+ActiveRecord::Schema.define(:version => 20110315140751) do
 
   create_table "customers", :force => true do |t|
     t.string   "username"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20110315122600) do
     t.date     "mfg_warranty_expires"
     t.date     "ext_warranty_expires"
     t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -12,6 +12,7 @@ one:
   mfg_warranty_expires: 2011-03-15
   ext_warranty_expires: 2011-03-15
   description: MyText
+  user_id: 1
 
 two:
   make: MyString
@@ -25,3 +26,4 @@ two:
   mfg_warranty_expires: 2011-03-15
   ext_warranty_expires: 2011-03-15
   description: MyText
+  user_id: 1

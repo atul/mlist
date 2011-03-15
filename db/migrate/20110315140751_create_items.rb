@@ -12,6 +12,7 @@ class CreateItems < ActiveRecord::Migration
       t.date :mfg_warranty_expires
       t.date :ext_warranty_expires
       t.text :description
+      t.integer :user_id
 
       t.timestamps
     end
