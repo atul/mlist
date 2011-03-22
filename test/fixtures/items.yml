@@ -7,11 +7,11 @@ one:
   serial_number: MyString
   category: MyString
   purchase_price: 9.99
-  purchase_date: 2011-03-15
+  purchase_date: 2011-03-19
   place_purchased: MyString
-  mfg_warranty_expires: 2011-03-15
-  ext_warranty_expires: 2011-03-15
-  description: MyText
+  mfg_warranty_expires: 2011-03-19
+  ext_warranty_expires: 2011-03-19
+  description: MyString
   user_id: 1
 
 two:
@@ -21,9 +21,9 @@ two:
   serial_number: MyString
   category: MyString
   purchase_price: 9.99
-  purchase_date: 2011-03-15
+  purchase_date: 2011-03-19
   place_purchased: MyString
-  mfg_warranty_expires: 2011-03-15
-  ext_warranty_expires: 2011-03-15
-  description: MyText
+  mfg_warranty_expires: 2011-03-19
+  ext_warranty_expires: 2011-03-19
+  description: MyString
   user_id: 1

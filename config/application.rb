@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
-module Mlist
+module Projects
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -38,5 +38,6 @@ module Mlist
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    Projects::Application.config.secret_token = 'f5e66a55f040d3b0786af974eefb183d2b037308025d6c3ec89fbfc91bdee35100bfa0c62f80350b93d9bed50e012d9de3f80434334d85e15642a3fc4d9a6c89'
   end
 end

@@ -1,0 +1,10 @@
+res = Item.all.each do |x|
+    if x.user_id==2
+    then
+      x
+    end
+  end
+
+
+res1 = Item.find { |x| x.user_id==2}
+

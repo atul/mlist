@@ -1,8 +1,26 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
+  before_filter :authenticate_user!, :except=>[:index]
+#  before_filter :authenticate_user!, :except=>[:show,:index]
+
+#    
+#    @items_ = Item.all
+
+
   def index
-    @items = Item.all
+     @items = Item.all.each do |x|
+	if user_signed_in?
+	puts x.user_id
+	puts current_user.id
+         if x.user_id == current_user.id
+            x
+	else 
+	puts "Failed"
+         end
+	end
+      end
+p @items
 
     respond_to do |format|
       format.html # index.html.erb

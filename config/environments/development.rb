@@ -1,4 +1,4 @@
-Mlist::Application.configure do
+Projects::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -19,6 +19,8 @@ Mlist::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin

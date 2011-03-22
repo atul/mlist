@@ -1,0 +1,43 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Make</th>
+    <th>Model name</th>
+    <th>Model number</th>
+    <th>Serial number</th>
+    <th>Category</th>
+    <th>Purchase price</th>
+    <th>Purchase date</th>
+    <th>Place purchased</th>
+    <th>Mfg warranty expires</th>
+    <th>Ext warranty expires</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.make %></td>
+    <td><%= item.model_name %></td>
+    <td><%= item.model_number %></td>
+    <td><%= item.serial_number %></td>
+    <td><%= item.category %></td>
+    <td><%= item.purchase_price %></td>
+    <td><%= item.purchase_date %></td>
+    <td><%= item.place_purchased %></td>
+    <td><%= item.mfg_warranty_expires %></td>
+    <td><%= item.ext_warranty_expires %></td>
+    <td><%= item.description %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item', new_item_path %>
