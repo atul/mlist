@@ -1,33 +1,31 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
-  before_filter :authenticate_user!, :except=>[:index]
-#  before_filter :authenticate_user!, :except=>[:show,:index]
+#  before_filter :authenticate_user!, :except=>[:index]
+  before_filter :authenticate_user!, :except=>[:show,:index]
 
 #    
 #    @items_ = Item.all
 
 
   def index
-     @items = Item.all.each do |x|
-	if user_signed_in?
-	puts x.user_id
-	puts current_user.id
-         if x.user_id == current_user.id
-            x
-	else 
-	puts "Failed"
-         end
-	end
+     @items=[]
+     if user_signed_in?
+       @items = Item.where(:user_id => current_user.id)
+     else
+       puts "not signed in"
+     end
+
+     if @items.empty?
+       puts "@items is empty"
+     else
+
+      respond_to do |format|
+       format.html # index.html.erb
+       format.xml  { render :xml => @items }
       end
-p @items
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @items }
-    end
+     end
   end
-
   # GET /items/1
   # GET /items/1.xml
   def show
