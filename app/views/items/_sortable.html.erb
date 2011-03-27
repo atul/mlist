@@ -4,7 +4,10 @@
  jQuery.noConflict();
  jQuery(document).ready(function()
  {
-  jQuery("#itemTable").tablesorter();
+  jQuery("#itemTable").tablesorter({
+	widgets: ["zebra"], 
+	sortList: [[0,0]]
+	});
  }
 );
 </script>
