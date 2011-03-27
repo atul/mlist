@@ -1,6 +1,9 @@
+<% render 'sortable' %>
+
 <h1>Listing items</h1>
 
-<table>
+<table border=1 id="itemTable" class="tablesorter">
+<thead>
   <tr>
     <th>Make</th>
     <th>Model name</th>
@@ -18,7 +21,9 @@
     <th></th>
     <th></th>
   </tr>
+</thead>
 
+<tbody>
 <% @items.each do |item| %>
   <tr>
     <td><%= item.make %></td>
@@ -38,6 +43,7 @@
     <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+</tbody>
 </table>
 
 <br />
