@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Projects</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "jquery-rails.js", "jquery.tablesorter.js", "application.js" %>
-  <%= csrf_meta_tag %>
 
-  <%= yield :javascript %>
-</head>
+<%= render 'layouts/header' %>
+
 <body>
 
+<div class="container">
 
-<div id="user_nav">
-  <% if user_signed_in? %>
-   Signed in as <%= current_user.email %>. User ID is <%= current_user.id %>. Not you?
-   <%= link_to "Sign out", destroy_user_session_path %>
-  <% else %>
-   <%=link_to "Sign up", new_user_registration_path %> or
-   <%=link_to "Sign in", new_user_session_path %>
-  <% end %>
-</div> 
-<%= yield %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
+</div>
 
 </body>
 </html>

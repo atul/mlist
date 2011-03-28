@@ -1,0 +1,22 @@
+<head>
+  <title>Projects</title>
+  <%= stylesheet_link_tag "scaffold.css", "sortable.css", "custom.css" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "jquery-rails.js", "jquery.tablesorter.js", "application.js" %>
+  <%= csrf_meta_tag %>
+
+  <%= yield :javascript %>
+
+  <nav class="round">
+    <ul>
+    <% if user_signed_in? %>
+      <li>Signed in as <%= current_user.email %>  
+      <li>Not you? <%= link_to "Sign out", destroy_user_session_path %>
+    <% else %>
+      <li><%=link_to "Sign up", new_user_registration_path %> 
+      <li><%=link_to "Sign in", new_user_session_path %>
+    <% end %>
+    </ul>
+  </nav> 
+
+</head>
+
