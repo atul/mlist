@@ -1,65 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Make:</b>
-  <%= @item.make %>
-</p>
 
-<p>
-  <b>Model name:</b>
-  <%= @item.model_name %>
-</p>
-
-<p>
-  <b>Model number:</b>
-  <%= @item.model_number %>
-</p>
-
-<p>
-  <b>Serial number:</b>
-  <%= @item.serial_number %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @item.category %>
-</p>
-
-<p>
-  <b>Purchase price:</b>
-  <%= @item.purchase_price %>
-</p>
-
-<p>
-  <b>Purchase date:</b>
-  <%= @item.purchase_date %>
-</p>
-
-<p>
-  <b>Place purchased:</b>
-  <%= @item.place_purchased %>
-</p>
-
-<p>
-  <b>Mfg warranty expires:</b>
-  <%= @item.mfg_warranty_expires %>
-</p>
-
-<p>
-  <b>Ext warranty expires:</b>
-  <%= @item.ext_warranty_expires %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @item.description %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @item.user_id %>
-</p>
-
+<table border="3">
+<tr>
+<td><b>Make</b></td>
+<td><b>Model Name</b></td>
+<td><b>Model Number</b></td>
+<td><b>Serial Number</b></td>
+<td><b>Category</b></td>
+<td><b>Purchase Price</b></td>
+<td><b>Purchase Date</b></td>
+<td><b>Place Purchased</b></td>
+<td><b>Mfg. Warranty Expiry Date</b></td>
+<td><b>Ext. Warranty Expiry Date</b></td>
+<td><b>Description</b></td>
+<td><b>User</b></td>
+</tr>
+<tr>
+<td><%= @item.make %></td>
+<td><%= @item.model_name %></td>
+<td><%= @item.model_number %></td>
+<td><%= @item.serial_number %></td>
+<td><%= @item.category %></td>
+<td><%= @item.purchase_price %></td>
+<td><%= @item.purchase_date %></td>
+<td><%= @item.place_purchased %></td>
+<td><%= @item.mfg_warranty_expires %></td>
+<td><%= @item.ext_warranty_expires %></td>
+<td><%= @item.description %></td>
+<td><%= @item.user_id %></td>
+</tr>
+</table>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
