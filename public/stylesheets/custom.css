@@ -2,6 +2,12 @@
   width: 710px;
 }
 
+#itemTable_Container {
+  width: 700px; 
+  overflow-x: auto; 
+  padding: 5px;
+}
+
 body {
   background: #cff;
 }
@@ -24,8 +30,9 @@ nav {
 
 nav {
   background-color: white;
-  padding: 0 0.7em;
+  padding: 2 0.7em;
   white-space: nowrap;
+  margin-top: 0.5em;
 }
 
 nav ul {
@@ -58,5 +65,17 @@ nav ul li a:hover {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+}
+
+/* header-iamge */
+header-image.alpha60 {
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(0, 0, 0) transparent;
+  /* RGBa with 0.6 opacity */
+  background: rgba(0, 0, 0, 0.6);
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
